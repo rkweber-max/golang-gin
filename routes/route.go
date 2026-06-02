@@ -8,6 +8,7 @@ import (
 func HandleFunc() {
 	r := gin.Default()
 	r.GET("/classmates", controllers.FindAllClassmates)
+	r.GET("/:name", controllers.Hello)
 
 	r.Run()
 }

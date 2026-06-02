@@ -8,3 +8,10 @@ func FindAllClassmates(c *gin.Context) {
 		"name": "Rodrigo",
 	})
 }
+
+func Hello(c *gin.Context) {
+	name := c.Params.ByName("name")
+	c.JSON(200, gin.H{
+		"API say": "Hello " + name,
+	})
+}
