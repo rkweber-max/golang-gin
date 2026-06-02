@@ -1,17 +1,7 @@
 package main
 
-import "github.com/gin-gonic/gin"
-
-func FindAllClassmates(c *gin.Context) {
-	c.JSON(200, gin.H{
-		"id":   "1",
-		"name": "Rodrigo",
-	})
-}
+import "github.com/rkweber-max/golang-gin/routes"
 
 func main() {
-	r := gin.Default()
-	r.GET("/classmates", FindAllClassmates)
-
-	r.Run()
+	routes.HandleFunc()
 }
